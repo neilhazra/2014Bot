@@ -1,3 +1,4 @@
+#include <Arduino.h>
 /*
  *Neil Hazra
  *Send Data via Processing: 5 floats, semicolon delimiter, add semicolons till reading newe line
@@ -17,10 +18,10 @@ void setup() {
   servo1.attach(A1);
   servo2.attach(A0);
   servo3.attach(A2);
-  servo4.attach(A3); 
+  servo4.attach(A3);
 }
 void serialEvent()  {
-   myBot.saveData(); 
+   myBot.saveData();
 }
 void loop() {
   processedData = myBot.getData();
@@ -40,3 +41,4 @@ float mapf(float x, float in_min, float in_max, float out_min, float out_max)
 {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+gm
